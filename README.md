@@ -107,7 +107,7 @@ K-Neighbors Test Scores:
 - MSE: 1399274.266 
 - RMSE: 1182.909 
 
-###Model Performance:
+### Model Performance:
 
 - Decision Tree tuned at 6 max depth have a little bias on it and it out-perform other models.
 - For the testing set on the model, 58.2% of the variance in y was explained by x. 

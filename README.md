@@ -20,7 +20,7 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 
 ### Importances, Coefficients and SHAP 
 
-#### Linear Regression
+### Linear Regression
 
 <img src = 'Linear Regression Coefficients.jpg'>
 
@@ -29,7 +29,7 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     2. Outlet_Type: Being in a category of which the product belongs will increase the sales by 843.257
     3. Outlet_Location_Type_Tier2: Being a Tier 2 for Location Type will Increase the sales by 477.208.
 
-#### Random Forest Model
+### Random Forest Model
 
 <img src = 'Random Forest Importances.jpg'>
 
@@ -44,7 +44,7 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     2. Outlet_Type
     3. Outlet_Establishment_Year
     
-<img src = 'Random Forest Importances.jpg'>
+<img src = 'Random Forest Shap Values Bar.jpg'>
 
 - Shap Values and Feature Importance have the same top 5 most important features. However, three of them are not in the same place. 
     1. Outlet_Establishment_Year is placed 3rd on Shap but for feature importance it is placed 5th.
@@ -56,9 +56,9 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     2. Outlet_type
     3. Outlet_Establishment_year
 
-#### Tuned Random Forest Model
+### Tuned Random Forest Model
 
-<img src = 'Random Forest Shap Values Bar.jpg'>
+<img src = 'Tuned Forest Importances.jpg'>
 
 - Tuned Random Forest Only shows top 3 most important features. This is true for both Feature Importance and Permutation Importance. These Features are:
     1. Item_MRP
@@ -73,7 +73,7 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     2. Putlet_Type
     3. Outlet_Establishment_Year
     
-#### SHAP Model Explainer
+### SHAP Model Explainer
 <bold> NOTE: Defaulted Random Forest and Tuned Random Forest have the same top 5 values. </bold>
 <img src = 'Random Forest Shap Values Dot.jpg'>
  
@@ -93,8 +93,6 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 ![Screenshot 2023-04-04 182238](https://user-images.githubusercontent.com/125017784/229959887-9438b406-e014-4d43-ac7d-adfd45e2a774.png)
 
 This histoplot shows that the average Outlet Sales is 2181.29. 
-
-## Explanatory Data Analysis:
 
 - Barplot was used in analysing the data.
 

@@ -16,6 +16,44 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 
 ### This data was cleaned: Duplicates has been removed and Missing values has been inputed. Finally graph has been made for data analysis.
 
+## Data Visualisation: 
+
+### Importances and Coefficients
+
+#### Linear Regression
+
+<img src = 'Linear Regression Coefficients.jpg'>
+
+- According to the Linear Regression Model the Top 3 most important features are:
+    1. Item_MRP: The retail price of the item will increase the outlet sales by 987.91.
+    2. Outlet_Type: Being in a category of which the product belongs will increase the sales by 843.257
+    3. Outlet_Location_Type_Tier2: Being a Tier 2 for Location Type will Increase the sales by 477.208.
+
+#### Random Forest Model
+
+<img src = 'Random Forest Importances.jpg'>
+
+- According to the Random Forest the top 5 most important features are:
+    1. Item_MRP
+    2. Outlet_Type
+    3. Item_Visibility
+    4. Item_Weight
+    5. Outlet_Establishment_Year
+- However, Permutation Importance only shows 3 as the most important features. All of which are also seen in the Feature Importance Top 5. These Features are:
+    1. Item_MRP
+    2. Outlet_Type
+    3. Outlet_Establishment_Year
+
+#### Tuned Random Forest Model
+
+<img src = 'Tuned Forest Importances.jpg'>
+
+- Tuned Random Forest Only shows top 3 most important features. This is true for both Feature Importance and Permutation Importance. These Features are:
+    1. Item_MRP
+    2. Outlet_Type
+    3. Outlet_Establishment_Year
+- Notice that these 3 important features (According to Tuned Random Forest Model) are the same results we get on the Defaulted model under Permutation Importance.
+
 ## Exploratory Data Analysis:
 - Count Plot was used to graph Categorical Columns
 - Histogram was used to graph Numerical Columns
@@ -60,6 +98,7 @@ This histoplot shows that the average Outlet Sales is 2181.29.
 ![Screenshot 2023-04-04 183824](https://user-images.githubusercontent.com/125017784/229961250-1d212c8c-e3b6-482c-b14b-329eab3a9f9a.png)
 ### Additional Graph
 The previous graphs shows that the top earning for Outlet Size is the Medium Size, and the top earning Outlet Location is the Tier 2. This graph shows that we cannot see any Tier 2 in our Middle-Sized Outlets. We need to investifate the Unknown Values in this regard. 
+
 
 # Machine Learning
 
@@ -117,6 +156,7 @@ K-Neighbors Test Scores:
 
 We can use Decision Tree Model (Tuned max depth to 6) to make predictions about: Which Outlet makes more profit? What type of Outlet to consider? Where should this Outlet be located? 
 
+
 # Recommendation
 ### Even if our data doesn't show Medium-Sized Outlet in Tier 2 Location. Entrepreneurs should still consider having a Medium Sized Outlet on Tier 2 Locations as these makes the most profits. Starchy Foods, Seafoods, Fruit and Vegetables are amongst the highest sales on our Item list. 
 
@@ -125,6 +165,7 @@ Entrepreneurs should be able to use the insights on how things are going in Outl
 
 **“Good business leaders create a vision, articulate the vision, passionately own the vision, and relentlessly drive it to completion.”** </br>
 -Jack Welch
+
 
 # For Further Information:
 Jude Maico Jr. (Future Data Scientist) </br>

@@ -1,37 +1,41 @@
 # Realization of Bargain Depot Sales
 
-![960x0](https://user-images.githubusercontent.com/125017784/229952353-671d148a-6895-402f-9aee-de7ca0540f30.jpg)
+<p align="center">
+<img src = 'https://user-images.githubusercontent.com/125017784/229952353-671d148a-6895-402f-9aee-de7ca0540f30.jpg'>
+</p>
 
-## Investigation of Outlet Sales
+# Investigation of Outlet Sales
 Jude Maico Jr.
 
 #### There's a lot of things to consider when starting a Grocery Outlet: Which Outlet makes more profit? What type of Outlet to consider? Where should this Outlet be located? How will this Outlet compete with the existing Grocery Outlets? With this in mind, We need to have an idea on how things are going in Outlet Stores to make a firm decision.
 
-## Data Source:
+# Data Source:
 Big Mart Sales Prediction:
 https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/
 
-## Data Dictionary:
+# Data Dictionary:
 ![Screenshot 2023-04-04 174607](https://user-images.githubusercontent.com/125017784/229956145-9eedfd9f-7e29-43be-9605-dc67bb95f912.png)
 
-### This data was cleaned: Duplicates has been removed and Missing values has been inputed. Finally graph has been made for data analysis.
+#### This data was cleaned: Duplicates has been removed and Missing values has been inputed. Finally graph has been made for data analysis.
 
-## Data Visualisation: 
+# Data Visualisation:  
 
-### Importances, Coefficients and SHAP 
+## Linear Regression Coefficients
 
-### Linear Regression
-
+<p align="center">
 <img src = 'Linear Regression Coefficients.jpg'>
+</p>
 
 - According to the Linear Regression Model the Top 3 most important features are:
     1. Item_MRP: The retail price of the item will increase the outlet sales by 987.91.
     2. Outlet_Type: Being in a category of which the product belongs will increase the sales by 843.257
     3. Outlet_Location_Type_Tier2: Being a Tier 2 for Location Type will Increase the sales by 477.208.
 
-### Random Forest Model
+## Random Forest Model Importances and Bar SHAP
 
+<p align="center">
 <img src = 'Random Forest Importances.jpg'>
+</p>
 
 - According to the Random Forest the top 5 most important features are:
     1. Item_MRP
@@ -43,8 +47,10 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     1. Item_MRP
     2. Outlet_Type
     3. Outlet_Establishment_Year
-    
+
+<p align="center">
 <img src = 'Random Forest Shap Values Bar.jpg'>
+</p>
 
 - Shap Values and Feature Importance have the same top 5 most important features. However, three of them are not in the same place. 
     1. Outlet_Establishment_Year is placed 3rd on Shap but for feature importance it is placed 5th.
@@ -56,9 +62,11 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     2. Outlet_type
     3. Outlet_Establishment_year
 
-### Tuned Random Forest Model
+## Tuned Random Forest Model Importances and Bar SHAP
 
+<p align="center">
 <img src = 'Tuned Forest Importances.jpg'>
+</p>
 
 - Tuned Random Forest Only shows top 3 most important features. This is true for both Feature Importance and Permutation Importance. These Features are:
     1. Item_MRP
@@ -66,7 +74,9 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     3. Outlet_Establishment_Year
 - Notice that these 3 important features (According to Tuned Random Forest Model) are the same results we get on the Defaulted model under Permutation Importance.
 
+<p align="center">
 <img src = 'Tuned Random Forest Shap Values Bar.jpg'>
+</p>
 
 - Shap values, Feature importance and Permutaton Importance for the Tuned Random Forest, all have the same top 3 most important values.
     1. Item_MRP
@@ -74,8 +84,11 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     3. Outlet_Establishment_Year
     
 ### SHAP Model Explainer
-<bold> NOTE: Defaulted Random Forest and Tuned Random Forest have the same top 5 values. </bold>
+#### NOTE: Defaulted Random Forest and Tuned Random Forest have the same top 5 values.
+
+<p align="center">
 <img src = 'Random Forest Shap Values Dot.jpg'>
+</p>
  
 1. Item_MRP has the largest effect on Random Forest Model.
     - The higher the retail price of the product, the higher the outlet sales the store will have.
@@ -84,7 +97,7 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 3. Outlet_Establishment_Year
     - The red values (newly established) are leaning more on the left (negative) side. Newly Established outlets have lower sales than the Older Established outlets. 
 
-## Exploratory Data Analysis:
+# Exploratory Data Analysis:
 - Count Plot was used to graph Categorical Columns
 - Histogram was used to graph Numerical Columns
 - Regplot was used to plot the data and draw the linear Regression fit

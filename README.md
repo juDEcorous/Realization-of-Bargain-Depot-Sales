@@ -18,7 +18,7 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 
 ## Data Visualisation: 
 
-### Importances and Coefficients
+### Importances, Coefficients and SHAP 
 
 #### Linear Regression
 
@@ -43,16 +43,46 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
     1. Item_MRP
     2. Outlet_Type
     3. Outlet_Establishment_Year
+    
+<img src = 'Random Forest Importances.jpg'>
+
+- Shap Values and Feature Importance have the same top 5 most important features. However, three of them are not in the same place. 
+    1. Outlet_Establishment_Year is placed 3rd on Shap but for feature importance it is placed 5th.
+    2. Item_Visibility is placed 4th on Shap but for feature importance it is placed 3rd.
+    3. Item_weight is placed 5th on Shap but for feature importance it is placed 4th. 
+    
+- Shap values and Permutation Importance have the same top 3 most important features:
+    1. Item_MRP
+    2. Outlet_type
+    3. Outlet_Establishment_year
 
 #### Tuned Random Forest Model
 
-<img src = 'Tuned Forest Importances.jpg'>
+<img src = 'Random Forest Shap Values Bar.jpg'>
 
 - Tuned Random Forest Only shows top 3 most important features. This is true for both Feature Importance and Permutation Importance. These Features are:
     1. Item_MRP
     2. Outlet_Type
     3. Outlet_Establishment_Year
 - Notice that these 3 important features (According to Tuned Random Forest Model) are the same results we get on the Defaulted model under Permutation Importance.
+
+<img src = 'Tuned Random Forest Shap Values Bar.jpg'>
+
+- Shap values, Feature importance and Permutaton Importance for the Tuned Random Forest, all have the same top 3 most important values.
+    1. Item_MRP
+    2. Putlet_Type
+    3. Outlet_Establishment_Year
+    
+#### SHAP Model Explainer
+<bold> NOTE: Defaulted Random Forest and Tuned Random Forest have the same top 5 values. </bold>
+<img src = 'Random Forest Shap Values Dot.jpg'>
+ 
+1. Item_MRP has the largest effect on Random Forest Model.
+    - The higher the retail price of the product, the higher the outlet sales the store will have.
+2. Outlet_type has the second largest effect on the model.
+    - A product being in a higher category(type), the higher the outlet sales the store will have.
+3. Outlet_Establishment_Year
+    - The red values (newly established) are leaning more on the left (negative) side. Newly Established outlets have lower sales than the Older Established outlets. 
 
 ## Exploratory Data Analysis:
 - Count Plot was used to graph Categorical Columns

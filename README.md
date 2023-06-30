@@ -112,7 +112,6 @@ K-Neighbors Test Scores:
 - It has the lowest Mean Squared Error at 1138939.058.
 - It has the lowset Testing Mean Squared Error at 1073.569.
 
-We can use Decision Tree Model (Tuned max depth to 6) to make predictions about: Which Outlet makes more profit? What type of Outlet to consider? Where should this Outlet be located? 
 
 # Data Visualisation:  
 

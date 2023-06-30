@@ -212,6 +212,7 @@ K-Neighbors Test Scores:
 - Predicted Sale Price: ₹4,092.13
 - Push towards a higher price: Outlet_Type_Grocery Store, Item_MRP
 - Push Towards a lower price: Outlet_Type_Supermarket Type3
+- A Greater push towards a higher sale price is seen
 
 ## Top 2 Highest Sales
 
@@ -225,7 +226,8 @@ K-Neighbors Test Scores:
 
 - Predicted Sale Price: ₹6,417.38
 - Push towards a higher price: Outlet_Establishment_Year, Item_MRP, Outlet_Type_Supermarket Type3, Outlet_Type_Grocery Store
-- Push Towards a lower price: Item_MRP: No big impact as seen
+- Push Towards a lower price: No big impact as seen
+- A Greater push towards a higher sale price is seen
 
 ## Top 3 Highest Sales
 
@@ -240,11 +242,15 @@ K-Neighbors Test Scores:
 
 - Predicted Sale Price: ₹6,369.68
 - Push towards a higher price: Outlet_Type_Grocery Store, Outlet_Establishment_Year, Item_MRP, Outlet_Type_Supermarket Type3
-- Push towards a lower price: Item_Visibility
+- Push Towards a lower price: No big impact as seen
+- A Greater push towards a higher sale price is seen
 
 ### Local Explanation Findings:
 - Outlet_Type_Grocery have the highest positive influence seen on all three samples. 
 - Item_MRP is the second highest positive influence in all three samples.
+- Predicted value of sale seems to be lower on our Top 1 Highest Sales that the other two.
+- (Since they are amongst the Top 3 Highest Sales) Greater push towards a higher sale price is seen in all of them.
+  
 
 # Insights
 

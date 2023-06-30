@@ -18,84 +18,6 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 
 #### This data was cleaned: Duplicates has been removed and Missing values has been inputed. Finally graph has been made for data analysis.
 
-# Data Visualisation:  
-
-## Linear Regression Coefficients
-
-<p align="center">
-<img src = 'Linear Regression Coefficients.jpg'>
-</p>
-
-- According to the Linear Regression Model the Top 3 most important features are:
-    1. Item_MRP: The retail price of the item will increase the outlet sales by 987.91.
-    2. Outlet_Type: Being in a category of which the product belongs will increase the sales by 843.257
-    3. Outlet_Location_Type_Tier2: Being a Tier 2 for Location Type will Increase the sales by 477.208.
-
-## Random Forest Model Importances and Bar SHAP
-
-<p align="center">
-<img src = 'Random Forest Importances.jpg'>
-</p>
-
-- According to the Random Forest the top 5 most important features are:
-    1. Item_MRP
-    2. Outlet_Type
-    3. Item_Visibility
-    4. Item_Weight
-    5. Outlet_Establishment_Year
-- However, Permutation Importance only shows 3 as the most important features. All of which are also seen in the Feature Importance Top 5. These Features are:
-    1. Item_MRP
-    2. Outlet_Type
-    3. Outlet_Establishment_Year
-
-<p align="center">
-<img src = 'Random Forest Shap Values Bar.jpg'>
-</p>
-
-- Shap Values and Feature Importance have the same top 5 most important features. However, three of them are not in the same place. 
-    1. Outlet_Establishment_Year is placed 3rd on Shap but for feature importance it is placed 5th.
-    2. Item_Visibility is placed 4th on Shap but for feature importance it is placed 3rd.
-    3. Item_weight is placed 5th on Shap but for feature importance it is placed 4th. 
-    
-- Shap values and Permutation Importance have the same top 3 most important features:
-    1. Item_MRP
-    2. Outlet_type
-    3. Outlet_Establishment_year
-
-## Tuned Random Forest Model Importances and Bar SHAP
-
-<p align="center">
-<img src = 'Tuned Forest Importances.jpg'>
-</p>
-
-- Tuned Random Forest Only shows top 3 most important features. This is true for both Feature Importance and Permutation Importance. These Features are:
-    1. Item_MRP
-    2. Outlet_Type
-    3. Outlet_Establishment_Year
-- Notice that these 3 important features (According to Tuned Random Forest Model) are the same results we get on the Defaulted model under Permutation Importance.
-
-<p align="center">
-<img src = 'Tuned Random Forest Shap Values Bar.jpg'>
-</p>
-
-- Shap values, Feature importance and Permutaton Importance for the Tuned Random Forest, all have the same top 3 most important values.
-    1. Item_MRP
-    2. Putlet_Type
-    3. Outlet_Establishment_Year
-    
-### SHAP Model Explainer
-#### NOTE: Defaulted Random Forest and Tuned Random Forest have the same top 5 values.
-
-<p align="center">
-<img src = 'Random Forest Shap Values Dot.jpg'>
-</p>
- 
-1. Item_MRP has the largest effect on Random Forest Model.
-    - The higher the retail price of the product, the higher the outlet sales the store will have.
-2. Outlet_type has the second largest effect on the model.
-    - A product being in a higher category(type), the higher the outlet sales the store will have.
-3. Outlet_Establishment_Year
-    - The red values (newly established) are leaning more on the left (negative) side. Newly Established outlets have lower sales than the Older Established outlets. 
 
 # Exploratory Data Analysis:
 - Count Plot was used to graph Categorical Columns
@@ -196,6 +118,98 @@ K-Neighbors Test Scores:
 - It has the lowset Testing Mean Squared Error at 1073.569.
 
 We can use Decision Tree Model (Tuned max depth to 6) to make predictions about: Which Outlet makes more profit? What type of Outlet to consider? Where should this Outlet be located? 
+
+# Data Visualisation:  
+
+## Linear Regression Coefficients
+
+<p align="center">
+<img src = 'Linear Regression Coefficients.jpg'>
+</p>
+
+- According to the Linear Regression Model the Top 3 most important features are:
+    1. Item_MRP: The retail price of the item will increase the outlet sales by 987.91.
+    2. Outlet_Type: Being in a category of which the product belongs will increase the sales by 843.257
+    3. Outlet_Location_Type_Tier2: Being a Tier 2 for Location Type will Increase the sales by 477.208.
+    
+<p align="center">
+<img src = 'Linear Regression Shap Values Bar.jpg'>
+</p>
+
+- Item_MRP, Outlet_Type_Supermarket_Type3, Outlet_Establishment_Year are seen on the top 5 most important feature for both Coefficients and SHAP. However, they are all in different order.
+- For the other two features. We notice that the Coefficient relied more on Outlet_Size_Big and Item_Type_Seafood features while the SHAP relied more on Outlet_Size_Medium and Outlet_type_Grocery_Store.
+
+
+## Random Forest Model Importances and Bar SHAP
+#### We tuned this model as High Variance is seen on the defaulted model.
+
+<p align="center">
+<img src = 'Tuned Forest Importances.jpg'>
+</p>
+
+- Tuned Random Forest only shows top 4 most important features. This is true for both Feature Importance and Permutation Importance. These Features are:
+    1. Item_MRP
+    2. Outlet_Type_Grocery_Store
+    3. Outlet_Type_Supermarket_Type3
+    4. Outlet_Establishment_Year
+
+
+<p align="center">
+<img src = 'Tuned Random Forest Shap Values Bar.jpg'>
+</p>
+
+- Shap values, Feature importance and Permutaton Importance for the Tuned Random Forest, all have the same top 4 most important values.
+    1. Item_MRP
+    2. Outlet_Type_Grocery_Store
+    3. Outlet_Type_Supermarket_Type3
+    4. Outlet_Establishment_Year
+- Shap values and Feature importance have same 5th place which is Item_Visibility. While Permutaion Importance suggest that Outlet_Type_Supermarket_Type3 is more important.
+
+    
+## SHAP Dot Models
+
+#### We are going to compare Linear Regression model vs Random Forest Model with regards to beesward graph
+
+## Linear Regression SHAP Dot
+
+<p align="center">
+<img src = 'Linear Regression Shap Values Dot.jpg'>
+</p>
+
+1. Item_MRP has the largest effect on Linear Regression Model.
+    - The green and yellow values are mostly seen on the right (positive) side. The higher the retail price of the product, the higher the outlet sales the store will have.
+2. Outlet_Type_Supermarket_Type3
+    - The yellow values are leaning more on the right (negative) side. Supermarket_Type3 will make much more profit than the other outlet types.
+3. Outlet_Type_Grocery_Store
+    - The Yellow values are at the left (negative) side. The Grocery Stores will not make as much sales as the other type.
+4. Outlet_Establishment_Year
+    - The yellow and green values (newly established) are more on the right (positive) side. Newly Established outlets makes more sale than the Older Established outlets.
+
+## Random Forest SHAP Dot
+
+<p align="center">
+<img src = 'Tuned Random Forest Shap Values Dot.jpg'>
+</p>
+
+1. Item_MRP has the largest effect on Random Forest Model.
+    - The green and yellow values are mostly seen on the right (positive) side. The higher the retail price of the product, the higher the outlet sales the store will have.
+2. Outlet_Type_Grocery_Store has the second largest effect on the model.
+    - The Yellow values are at the left (negative) side. This suggest that the Grocery Stores will not make as much high sales as the other type.
+3. Outlet_Type_Supermarket_Type3
+    - The yellow values are leaning more on the right (positive) side. Unlike the Grocery Stores, Supermarket_Type3 will make much more profit.
+4. Outlet_Establishment_Year
+    - The yellow and green values (newly established) are leaning more on the left (negative) side. Newly Established outlets have lower sales than the Older Established outlets.
+
+#### Both Linear Regression and Random Forest have the same top 4 features with regards to largest effect. The only difference is Outlet_Type_Grocery_Store is seen on the negative side for Linear Regression but is on positive side for Random Forest. Another thing to note is Outlet_Establishment_Year is seen on positive side for Linear Regression but is on the negative side for Random Forest.
+
+## Local Explanation
+- We are going to compare the Top 3 samples with the highest sales.
+
+
+
+
+
+
 
 
 # Recommendation

@@ -25,13 +25,18 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 - Regplot was used to plot the data and draw the linear Regression fit
 - Heatmap was used to see the Initial Correlation of Numerical Columns, which only shows a moderate correlation between Item_MRP and Item_Outlet_Sales.
 
-![Screenshot 2023-04-04 182238](https://user-images.githubusercontent.com/125017784/229959887-9438b406-e014-4d43-ac7d-adfd45e2a774.png)
+<p align="center">
+<img src = 'Graph/average sales of all outlet stores.jpg'>
+</p>
 
 This histoplot shows that the average Outlet Sales is 2181.29. 
 
 - Barplot was used in analysing the data.
 
-![Screenshot 2023-04-04 183753](https://user-images.githubusercontent.com/125017784/229960759-b344f6e6-a3d9-4792-b03e-495b9a6daee9.png)
+<p align="center">
+<img src = 'Graph/average sales of outlet stores b y outlet size.jpg'>
+</p>
+
 ### Which Outlet Size has the most sales?
 * **Top** earning Outlet Size
   - **Medium Size Outlet: 2681.60**
@@ -42,7 +47,10 @@ This histoplot shows that the average Outlet Sales is 2181.29.
 * Lowest earning Outlet Size
   - **Unknown Size Outlet: 1822.62**
   
-![Screenshot 2023-04-04 183800](https://user-images.githubusercontent.com/125017784/229960978-20a07227-deaf-44bf-91ec-d9fbfc694f6b.png)
+<p align="center">
+<img src = 'Graph/average sales of outlet stores by outlet type.jpg'>
+</p>
+
 ### Which Location Type makes the highest sales?
 - **Top** earning per location type
   - **Tier 2: 2323.99**
@@ -51,12 +59,19 @@ This histoplot shows that the average Outlet Sales is 2181.29.
 - Lowest earning per location type
   - **Tier 1: 1876.90**
 
-![Screenshot 2023-04-04 182307](https://user-images.githubusercontent.com/125017784/229961080-82f78cae-5600-4498-bc43-5817231a786a.png)
+<p align="center">
+<img src = 'Graph/average sales of outlet stores by outlet type.jpg'>
+</p>
+
 ### Which Item Sales most?
 - Top 3 Item that sales most are:
   1. Starchy Foods: **2374.33**
   2. Seafood: **2326.06**
   3. Fruits and Vegetables: **2289.00**
+  
+<p align="center">
+<img src = 'Graph/item on outlet with most sales.jpg'>
+</p>
 
 # Machine Learning
 
@@ -68,49 +83,18 @@ This histoplot shows that the average Outlet Sales is 2181.29.
 5. K-Nearest Neighbors Model
 
 ## Models were evaluated and Results:
-Linear Regression Test Scores:
-- R^2: 0.567 
-- MAE: 804.177 
-- MSE: 1194454.943 
-- RMSE: 1092.911 
 
-Decision Tree Test Scores:
-- R^2: 0.183 
-- MAE: 1044.079 
-- MSE: 2252983.394 
-- RMSE: 1500.994 
-
-Tuned Decision Tree Test Scores:
-- R^2: 0.582 
-- MAE: 742.572 
-- MSE: 1152549.335 
-- RMSE: 1073.569 
-
-Bagged Tree Test Scores:
--  R^2: 0.522 
-- MAE: 796.362 
-- MSE: 1318765.376 
-- RMSE: 1148.375 
-
-Random Forest Test Scores:
-- R^2: 0.554 
-- MAE: 769.215 
-- MSE: 1229700.289 
-- MSE: 1108.919 
-
-K-Neighbors Test Scores:
-- R^2: 0.493 
-- MAE: 839.764 
-- MSE: 1399274.266 
-- RMSE: 1182.909 
+<p align="center">
+<img src = 'Graph/model results.png'>
+</p>
 
 ### Model Performance:
 
 - Decision Tree tuned at 6 max depth have a little bias on it and it out-perform other models.
 - For the testing set on the model, 58.2% of the variance in y was explained by x. 
-- It has the lowest Testing Mean Absolute Error at 742.572.
-- It has the lowest Mean Squared Error at 1138939.058.
-- It has the lowset Testing Mean Squared Error at 1073.569.
+- Tuned Decision Tree has the lowest Testing MAE at 747.58.
+- Tuned Decision Tree has the lowest Testing MSE at 1152549.33.
+- Tuned Decision Tree has the lowest Testing RMSE at 1073.57.
 
 
 # Data Visualisation:  
@@ -118,7 +102,7 @@ K-Neighbors Test Scores:
 ## Linear Regression Coefficients
 
 <p align="center">
-<img src = 'Linear Regression Coefficients.jpg'>
+<img src = 'Graph/Linear Regression Coefficients.jpg'>
 </p>
 
 - According to the Linear Regression Model the Top 3 most important features are:
@@ -127,7 +111,7 @@ K-Neighbors Test Scores:
   3. Outlet_Size_Big: Having a big Outlet seems to increase the sales by ₹553.40.
     
 <p align="center">
-<img src = 'Linear Regression Shap Values Bar.jpg'>
+<img src = 'Graph/Linear Regression Shap Values Bar.jpg'>
 </p>
 
 - Item_MRP, Outlet_Type_Supermarket_Type3, Outlet_Establishment_Year are seen on the top 5 most important feature for both Coefficients and SHAP. However, they are all in different order.
@@ -138,7 +122,7 @@ K-Neighbors Test Scores:
 #### We tuned this model as High Variance is seen on the defaulted model.
 
 <p align="center">
-<img src = 'Tuned Forest Importances.jpg'>
+<img src = 'Graph/Tuned Forest Importances.jpg'>
 </p>
 
 - Tuned Random Forest only shows top 4 most important features. This is true for both Feature Importance and Permutation Importance. These Features are:
@@ -149,7 +133,7 @@ K-Neighbors Test Scores:
 
 
 <p align="center">
-<img src = 'Tuned Random Forest Shap Values Bar.jpg'>
+<img src = 'Graph/Tuned Random Forest Shap Values Bar.jpg'>
 </p>
 
 - Shap values, Feature importance and Permutaton Importance for the Tuned Random Forest, all have the same top 4 most important values.
@@ -167,7 +151,7 @@ K-Neighbors Test Scores:
 ## Linear Regression SHAP Dot
 
 <p align="center">
-<img src = 'Linear Regression Shap Values Dot.jpg'>
+<img src = 'Graph/Linear Regression Shap Values Dot.jpg'>
 </p>
 
 1. Item_MRP has the largest effect on Linear Regression Model.
@@ -182,7 +166,7 @@ K-Neighbors Test Scores:
 ## Random Forest SHAP Dot
 
 <p align="center">
-<img src = 'Tuned Random Forest Shap Values Dot.jpg'>
+<img src = 'Graph/Tuned Random Forest Shap Values Dot.jpg'>
 </p>
 
 1. Item_MRP has the largest effect on Random Forest Model.

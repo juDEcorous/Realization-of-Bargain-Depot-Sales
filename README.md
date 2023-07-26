@@ -236,6 +236,16 @@ This histoplot shows that the average Outlet Sales is 2181.29.
 - (Since they are amongst the Top 3 Highest Sales) Greater push towards a higher sale price is seen in all of them.
   
 
+# Tableau
+
+<a href="https://public.tableau.com/app/profile/jude.maico/viz/BargainDepotSales/InteractiveGraphs?publish=yes">Tableau Link here</a>
+
+<p align="center">
+<img src = 'Tableau Public.png'>
+</p>
+
+
+
 # Insights
 
 - EDA shows that Medium Sized Outlet Stores have the highest mean sales of ₹2,681.60.
